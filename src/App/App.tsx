@@ -19,7 +19,7 @@ const App = () => {
           turnState={turn}
           updateTurn={setTurn}
         />
-        <TurnDisplay turnToDisplay={turn} />;
+        <TurnDisplay turnToDisplay={turn} />
       </main>
     </>
   );

@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import crypto from 'crypto';
 import Square from '../Square/Square';
 import './board-styled.css';
 import { TURNS } from '../../data/data';
@@ -34,10 +33,11 @@ const Board: FC<BoardProps> = ({
     <section className="board-container">
       {boardState.map((squareValue, index) => (
         <Square
-          children={squareValue}
-          key={crypto.randomUUID()}
+          key={window.crypto.randomUUID()}
           updateSquare={() => drawFigure(index)}
-        />
+        >
+          {squareValue}
+        </Square>
       ))}
     </section>
   );
