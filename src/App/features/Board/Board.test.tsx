@@ -1,8 +1,15 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { cryptoMock } from '../../test/__mocks__/fileMock';
 import App from '../../App';
 
 describe('Given a tic-tac-toe board', () => {
+  beforeEach(() => {
+    cryptoMock;
+  });
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   test("when a square is clicked, then an 'X' should be drawn in", async () => {
     render(<App />);
 

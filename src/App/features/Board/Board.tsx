@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import crypto from 'crypto';
 import Square from '../Square/Square';
 import './board-styled.css';
 import { TURNS } from '../../data/data';
