@@ -3,7 +3,7 @@
   justify-content: center;
   gap: 2rem;
 
-  font-family: 'varela-round';
+  font-family: 'varela-round', Avenir, Helvetica, Arial, sans-serif;
 
   width: fit-content;
 }
