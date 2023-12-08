@@ -1,11 +1,17 @@
 .square {
   display: flex;
-  min-width: fit-content;
-  min-height: 20vw;
   justify-content: center;
   align-items: center;
+
   background-color: transparent;
   border: 1px solid white;
   font-family: 'varela-round', Avenir, Helvetica, Arial, sans-serif;
-  font-size: 10vw;
+  font-size: 8cqw;
+  line-height: 0;
+}
+
+@media (min-width: 768px) {
+  .square {
+    max-height: inherit;
+  }
 }

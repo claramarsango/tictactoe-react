@@ -1,0 +1,26 @@
+.turns-display-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  font-family: 'varela-round', Avenir, Helvetica, Arial, sans-serif;
+
+  width: fit-content;
+}
+
+.turns__turn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  border-radius: 5px;
+  font-size: 8cqw;
+
+  width: 8cqw;
+  height: 8cqw;
+}
+
+.turn--selected {
+  background-color: rgba(62, 144, 226, 0.978);
+}

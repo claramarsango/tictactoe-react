@@ -1,41 +1,45 @@
-import { useState } from 'react';
+import { FC } from 'react';
+import crypto from 'crypto';
 import Square from '../Square/Square';
 import './board-styled.css';
+import { TURNS } from '../../data/data';
 
-enum TURNS {
-  X = 'x',
-  O = 'o',
+interface BoardProps {
+  boardState: string[];
+  updateBoard: (board: string[]) => void;
+  turnState: TURNS;
+  updateTurn: (turn: TURNS) => void;
 }
 
-const Board = () => {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [turn, setTurn] = useState(TURNS.X);
-
+const Board: FC<BoardProps> = ({
+  boardState,
+  updateBoard,
+  turnState,
+  updateTurn,
+}) => {
   const drawFigure = (squareIndex: number) => {
-    const newBoard = [...board];
+    const newBoard = [...boardState];
 
     if (newBoard[squareIndex]) return;
 
-    newBoard[squareIndex] = turn;
+    newBoard[squareIndex] = turnState;
 
-    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
+    const newTurn = turnState === TURNS.X ? TURNS.O : TURNS.X;
 
-    setBoard(newBoard);
-    setTurn(newTurn);
+    updateBoard(newBoard);
+    updateTurn(newTurn);
   };
 
   return (
-    <>
-      <section className="board-container">
-        {board.map((squareValue, index) => (
-          <Square
-            children={squareValue}
-            key={index}
-            updateSquare={() => drawFigure(index)}
-          />
-        ))}
-      </section>
-    </>
+    <section className="board-container">
+      {boardState.map((squareValue, index) => (
+        <Square
+          children={squareValue}
+          key={crypto.randomUUID()}
+          updateSquare={() => drawFigure(index)}
+        />
+      ))}
+    </section>
   );
 };
 
