@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Board from './features/Board/Board';
 import { TURNS } from './data/data';
+import TurnDisplay from './features/TurnDisplay/TurnDisplay';
 const App = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
@@ -18,6 +19,7 @@ const App = () => {
           turnState={turn}
           updateTurn={setTurn}
         />
+        <TurnDisplay turnToDisplay={turn} />;
       </main>
     </>
   );
