@@ -1,8 +1,20 @@
 .board-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   padding: 1rem;
-  height: 75vw;
   border: 1px solid white;
   border-radius: 5px;
+
+  max-width: 300px;
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+
+@media (min-width: 768px) {
+  .board-container {
+    min-width: 300px;
+    max-width: 45%;
+    aspect-ratio: 1/1;
+  }
 }
