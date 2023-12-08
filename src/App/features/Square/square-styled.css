@@ -1,0 +1,11 @@
+.square {
+  display: flex;
+  min-width: fit-content;
+  min-height: 20vw;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid white;
+  font-family: 'varela-round';
+  font-size: 10vw;
+}

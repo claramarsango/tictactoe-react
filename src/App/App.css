@@ -1,6 +1,9 @@
 #root {
-  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
 }

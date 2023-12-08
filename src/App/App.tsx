@@ -1,9 +1,15 @@
 import './App.css';
+import Board from './features/Board/Board';
 
 function App() {
   return (
     <>
-      <h1>Tic Tac Toe</h1>
+      <header className="title">
+        <h1>Tic Tac Toe</h1>
+      </header>
+      <main>
+        <Board />
+      </main>
     </>
   );
 }
