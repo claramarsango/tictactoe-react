@@ -14,7 +14,7 @@
 @media (min-width: 768px) {
   .board-container {
     min-width: 300px;
-    max-width: 400px;
+    max-width: 350px;
     width: 45%;
     aspect-ratio: 1/1;
   }

@@ -21,3 +21,10 @@
 .turn--selected {
   background-color: rgba(62, 144, 226, 0.978);
 }
+
+@media (min-width: 768px) {
+  .turns__turn {
+    font-size: 4rem;
+    height: 4rem;
+  }
+}
