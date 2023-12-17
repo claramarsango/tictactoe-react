@@ -3,13 +3,22 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 import userEvent from '@testing-library/user-event';
 
-test('Given a web page when there is a main title, then the title should appear', () => {
-  render(<App />);
+describe('Given a web page,', () => {
+  test('when there is a main title, then the title should appear', () => {
+    render(<App />);
 
-  const mainTitle = screen.getByText('Tic Tac Toe');
-  expect(mainTitle).toBeInTheDocument();
+    const mainTitle = screen.getByText('Tic Tac Toe');
+    expect(mainTitle).toBeInTheDocument();
+  });
+
+  test('when there is a footer, then it should appear on the page', () => {
+    render(<App />);
+
+    const footerMessage = screen.getByText('Developed by Clara Marsango');
+
+    expect(footerMessage).toBeInTheDocument();
+  });
 });
-
 describe('Given a tic-tac-toe board', () => {
   test("when a square is clicked, then an 'X' should be drawn in", async () => {
     render(<App />);
