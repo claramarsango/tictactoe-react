@@ -1,0 +1,66 @@
+.winner-modal-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.winner-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: rgba(62, 144, 226, 0.978);
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 6cqw;
+
+  max-height: 300px;
+  max-width: 420px;
+
+  width: 40%;
+  aspect-ratio: 1/1;
+}
+
+.modal__message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__message .square {
+  border: none;
+  font-size: 6cqw;
+  line-height: normal;
+}
+
+.winner-modal-container > .square {
+  line-height: normal;
+  font-size: 3cqw;
+  border-radius: 5px;
+  padding: 5%;
+}
+
+.winner-modal-container > .square:hover {
+  box-shadow: 0px 0px 4px rgb(229, 229, 229);
+}
+
+@media (min-width: 768px) {
+  .winner-modal-container {
+    font-size: 3rem;
+  }
+
+  .modal__message .square {
+    font-size: 3rem;
+  }
+
+  .winner-modal-container > .square {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}

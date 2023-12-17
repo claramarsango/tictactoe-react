@@ -3,12 +3,12 @@ import './square-styled.css';
 
 interface SquareProps {
   children: string;
-  updateSquare?: () => void;
+  handleClick?: () => void;
 }
 
-const Square: FC<SquareProps> = ({ children, updateSquare }) => {
+const Square: FC<SquareProps> = ({ children, handleClick }) => {
   return (
-    <button className="square" onClick={updateSquare}>
+    <button className="square" onClick={handleClick}>
       {children}
     </button>
   );
