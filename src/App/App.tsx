@@ -6,6 +6,7 @@ import TurnDisplay from './features/TurnDisplay/TurnDisplay';
 import WinnerModal from './features/WinnerModal/WinnerModal';
 import confetti from 'canvas-confetti';
 import Square from './features/Square/Square';
+import Footer from './features/Footer/Footer';
 
 const checkForAWinner = (boardToCheck: string[]) => {
   for (const combo of WINNING_COMBOS) {
@@ -62,6 +63,7 @@ const App = () => {
         <TurnDisplay turnToDisplay={turn} />
         <WinnerModal handleEndOfGame={restartGame}>{winner}</WinnerModal>
       </main>
+      <Footer />
     </>
   );
 };
